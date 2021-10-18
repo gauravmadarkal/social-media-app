@@ -1,0 +1,25 @@
+@import '../../assets/typography.css';
+@import '../../assets/variable.scss';
+
+h1 {
+	color: $plain-black;
+}
+html {
+	background-color: $bg;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'moteserrat';
+}
+.container {
+	max-width: $max-screen-width;
+	margin: 0 auto;
+
+	.post-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}

@@ -1,0 +1,15 @@
+$max-screen-width: 1900px;
+$media-width-sm: 26em; // 425px
+$media-width-md: 48em; // 768px
+$media-width-lg: 62em; // 992px
+$media-width-xl: 75em; //1200px
+
+/* colors */
+$plain-white: #fff;
+$bg: #fff3e0;
+$plain-black: #000;
+
+
+@mixin button_effect {
+	transition: background-color 500ms ease-in;
+}

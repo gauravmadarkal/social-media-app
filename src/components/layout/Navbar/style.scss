@@ -1,0 +1,32 @@
+@import "../../../assets/variable.scss";
+
+.nav {
+	max-height: 10em;
+	display: flex;
+	flex-direction: row;
+	padding: 2em 4em;
+	background-color: #fce4ec;
+	.logo-wrapper {
+		width: 5em;
+		border-radius: 50%;
+		background-color: $plain-white;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		padding: 1em;
+		img {
+			height: 4.5em;
+			width: 4.5em;
+		}
+	}
+	.username {
+		width: 80%;
+		align-self: flex-end;
+		p {
+			padding: 0;
+			margin: 0;
+			font-size: 2em;
+			text-align: right;
+		}
+	}
+}
