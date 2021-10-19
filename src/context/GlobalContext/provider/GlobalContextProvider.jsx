@@ -5,17 +5,11 @@ import GlobalContext from '../GlobalContext';
 const GlobalContextProvider = ({
 	children
 }) => {
-	const [profileName, setProfileName] = useState("Anonymous");
-
-	// useEffect(() => {
-	// 	// in realuity you will
-	// 	// make an api call to backend to fetch profile details and setProfileDetails
-	// }, []);
-
+	const [profileName, setProfileName] = useState();
 	return (
 		<GlobalContext.Provider
 			value={{
-				profileName
+				profileState: [profileName, setProfileName]
 			}}
 		>
 			{children}

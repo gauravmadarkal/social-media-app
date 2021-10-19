@@ -33,13 +33,16 @@ const Post = ({
 
 					<p className='post-title'>{data.title}</p>
 					{data.desc && <p className='post-desc'>{data.desc}</p>}
-					{data.img && <img className='post-img' src={data.img} />}
+					{data.img && <img className='post-img' src={data.img} alt='Thoughts - Post' />}
 					{data.comments && showComments && 
 						<div className='post-comments'>
 							<p className='comments-heading'>Comments</p>
 							<input type='text' placeholder='Write a comment' className='comment'/>
-							{data.comments.map(comment => (
-								<p className='comment'>{comment}</p>
+							{data.comments.map(comt_data => (
+								<>
+									<p className='comment-user'>{comt_data.username} commented</p>
+									<p className='comment'>{comt_data.comment}</p>
+								</>
 							))}
 						</div>
 					}
@@ -51,6 +54,7 @@ const Post = ({
 					<img 
 						className='post-action' 
 						src={Like}
+						alt='Like a post'
 					/>
 					<div className='count'>
 						<span>{data.comments.length}</span>
@@ -58,6 +62,7 @@ const Post = ({
 					<img 
 						className='post-action' 
 						src={Comment}
+						alt='Comment on a post'
 						onClick={() => setShowComments(!showComments)}
 					/>
 				</div>

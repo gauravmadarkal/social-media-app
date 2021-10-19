@@ -24,13 +24,13 @@
 				margin-left: 0.3em;
 			}
 			.post-title {
-				font-size: 2em;
+				font-size: 1.7em;
 				font-weight: bold;
 				margin: 0.2em 0.5em 0 0.5em;
 				padding: 0;
 			}
 			.post-desc {
-				font-size: 1em;
+				font-size: 0.9em;
 				font-weight: 100;
 				margin: 1em 0.5em 1.5em 1em;
 			}
@@ -41,7 +41,7 @@
 			.post-comments {
 				background-color: #f2f2f2;
 				padding-left: 1em;
-				margin-top: 1em;
+				padding-top: 1em;
 				.comments-heading {
 					font-weight: bold;
 					font-size: 1.3em;
@@ -50,12 +50,18 @@
 				input {
 					border: none;
 				}
+				.comment-user {
+					font-size: 0.8em;
+					margin: 0;
+					padding: 0;
+				}
 				.comment {
 					background-color: $plain-white;
 					padding: 0.2em;
 					padding-left: 0.5em;
 					width: 90%;
 					border-radius: 0.3em;
+					margin: 0.5em;
 				}
 			}
 		}

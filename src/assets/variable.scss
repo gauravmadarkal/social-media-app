@@ -6,8 +6,11 @@ $media-width-xl: 75em; //1200px
 
 /* colors */
 $plain-white: #fff;
-$bg: #fff3e0;
+// $bg: #fff3e0;
+// $bg: #cfe8e8;
+$bg: #e1ebeb;
 $plain-black: #000;
+$primary-color: #009CA0;
 
 
 @mixin button_effect {

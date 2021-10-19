@@ -1,32 +1,69 @@
 @import "../../../assets/variable.scss";
 
 .nav {
-	max-height: 10em;
+	max-height: 4em;
 	display: flex;
 	flex-direction: row;
-	padding: 2em 4em;
-	background-color: #fce4ec;
+	padding: 1em;
+	// background-color: #fce4ec;
+	// background-color: #2c4242;
+	background-color: $primary-color;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	box-shadow: 0 10px 16px -6px gray;
 	.logo-wrapper {
-		width: 5em;
+		width: 4.5em;
 		border-radius: 50%;
 		background-color: $plain-white;
 		justify-content: center;
 		align-items: center;
 		display: flex;
-		padding: 1em;
+		// padding: 1em;
 		img {
 			height: 4.5em;
 			width: 4.5em;
 		}
 	}
 	.username {
-		width: 80%;
-		align-self: flex-end;
+		width: 100%;
+		// align-self: flex-end;
+		color: $plain-white;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-right: 2em;
 		p {
 			padding: 0;
 			margin: 0;
-			font-size: 2em;
+			font-size: 1.5em;
 			text-align: right;
+		}
+		.account {
+			width: 3.5em;
+		}
+	}
+	.profile-dropdown {
+		position: absolute;
+		background-color: $plain-white;
+		height: fit-content;
+		width: fit-content;
+		right: 5em;
+		top: 6em;
+		border-radius: 0.4em;
+		padding: 1em .5em;
+		.form-input {
+			display: flex;
+			flex-direction: column;
+		}
+		.new-username {
+			border: 1px solid $primary-color;
+			width: fit-content;
+			color: black;
+		}
+		.login-button {
+			margin-top: 1em;
+			margin-left: 0;
 		}
 	}
 }
