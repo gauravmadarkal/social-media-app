@@ -12,7 +12,6 @@ const Post = ({
 		const today = Date.now();
 		const diffTime = Math.abs(today - posted);
 		const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-		console.log(diffDays)
 		if ((diffDays/30) > 3) {
 			return {
 				months: parseInt(diffDays/30)
