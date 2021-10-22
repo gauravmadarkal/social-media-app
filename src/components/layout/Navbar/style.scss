@@ -5,8 +5,6 @@
 	display: flex;
 	flex-direction: row;
 	padding: 1em;
-	// background-color: #fce4ec;
-	// background-color: #2c4242;
 	background-color: $primary-color;
 	position: fixed;
 	width: 100%;
@@ -19,7 +17,6 @@
 		justify-content: center;
 		align-items: center;
 		display: flex;
-		// padding: 1em;
 		img {
 			height: 4.5em;
 			width: 4.5em;
@@ -27,7 +24,6 @@
 	}
 	.username {
 		width: 100%;
-		// align-self: flex-end;
 		color: $plain-white;
 		display: flex;
 		justify-content: flex-end;
@@ -70,6 +66,31 @@
 		.login-button {
 			margin-top: 1em;
 			margin-left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: $media-width-xl) {
+	.nav {
+		.logo-wrapper {
+			width: 2.5em;
+			height: 2.5em;
+			img {
+				width: 2.5em;
+				height: 2.5em;
+			}
+		}
+		.username {
+			p {
+				font-size: 1.2em;
+			}
+			.account {
+				width: 2.5em;
+			}
+		}
+		.persistent-dropdown, .profile-dropdown {
+			top: 3.5em;
+			right: 3em;
 		}
 	}
 }

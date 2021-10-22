@@ -3,18 +3,13 @@
 .post {
 	border-radius: 0.5em;
 	background-color: $plain-white;
-	// max-width: 50%;
 	margin: 2em;
-	// padding: 2em;
 	width: fit-content;
 	display: flex;
 	height: fit-content;
 	.row {
 		display: flex;
 		flex-direction: row;
-		// .content {
-		// 	padding-right: 0.5em;
-		// }
 		.col {
 			display: flex;
 			flex-direction: column;
@@ -75,9 +70,7 @@
 			}
 		}
 		.actions {
-			// background-color: #ffe0b2;
 			background-color: #ffe8c7;
-			// padding-left: 1em;
 			border-top-right-radius: 0.5em;
 			border-bottom-right-radius: 0.5em;
 			text-align: center;
@@ -106,6 +99,17 @@
 				&:hover {
 					opacity: 0.5;
 					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: $media-width-xl) {
+	.post {
+		.row {
+			.col {
+				.post-title {
+					font-size: 1.3em;
 				}
 			}
 		}

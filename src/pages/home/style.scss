@@ -33,3 +33,11 @@ input, textarea {
 	font-size: 1.2em;
 	margin: 0.2em 0;
 }
+
+@media only screen and (max-width: $media-width-xl) {
+	.container {
+		.post-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}
