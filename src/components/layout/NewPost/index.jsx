@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { createPost, getPosts, uploadImage } from '../../../api';
+import { createPostAPI, uploadImageAPI } from '../../../api';
 import GlobalContext from '../../../context/GlobalContext/GlobalContext';
 import Button from '../../common/Button';
 import './style.scss';
 
 const NewPost = () => {
 	const [showNewPost, setShowNewPost] = useState(false);
-	const { profileState } = useContext(GlobalContext);
+	const { profileState, fetchPosts } = useContext(GlobalContext);
 	const [profileName, ] = profileState;
 	const [postData, setNewPostData] = useState({
 		title: '',
@@ -15,24 +15,33 @@ const NewPost = () => {
 	});
 	const handleSubmit = async () => {
 		try {
+			const today = new Date()
+			const date = today.toISOString().split('T')[0];
 			let reqBody = {
 				...postData,
 				username: profileName,
 				comments: [],
-				likes: 0
+				likes: 0,
+				timestamp: date
 			};
 			if (postData.img) {
-				const response = await uploadImage(postData.img);
+				const response = await uploadImageAPI(postData.img);
 				reqBody = {
 					...reqBody,
 					img: response.imageId
 				}
 			}
-			await createPost(reqBody);
+			await createPostAPI(reqBody);
 			setShowNewPost(false);
-			await getPosts();
+			await fetchPosts();
 		} catch (err) {
 			console.log(err);
+		} finally {
+			setNewPostData({
+				title: '',
+				desc: '',
+				img: undefined,	
+			})
 		}
 	}
 	function getBase64(file) {

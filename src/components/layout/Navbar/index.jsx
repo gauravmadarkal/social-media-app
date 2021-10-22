@@ -32,8 +32,11 @@ const Navbar = () => {
 				<p>Hello, {profileName || 'Anonymous'}</p>
 				<img src={User} className="account" alt='Thoughts - User' />
 			</div>
+			{!profileName && <div className='dropdown persistent-dropdown'>
+				<span>Login here</span>
+			</div>}
 			{showProfileDetails && 
-				<div className='profile-dropdown'>
+				<div className='dropdown profile-dropdown'>
 					{profileName? 
 						<p>You are signed in as {profileName}</p> 
 						:

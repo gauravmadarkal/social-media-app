@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getPosts } from '../../../api';
+import { getPostsAPI } from '../../../api';
 import GlobalContext from '../GlobalContext';
 
 
@@ -7,10 +7,10 @@ const GlobalContextProvider = ({
 	children
 }) => {
 	const [profileName, setProfileName] = useState();
-	const [posts, setPosts] = useState();
+	const [posts, setPosts] = useState([]);
 
 	const fetchPosts = async () => {
-		const response = await getPosts();
+		const response = await getPostsAPI();
 		console.log(response);
 		setPosts(response.posts);
 	}

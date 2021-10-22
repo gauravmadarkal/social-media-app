@@ -43,15 +43,21 @@
 			width: 3.5em;
 		}
 	}
-	.profile-dropdown {
+	.dropdown {
 		position: absolute;
 		background-color: $plain-white;
 		height: fit-content;
 		width: fit-content;
-		right: 5em;
-		top: 6em;
 		border-radius: 0.4em;
 		padding: 1em .5em;
+	}
+	.persistent-dropdown {
+		top: 5em;
+		right: 5em;
+	}
+	.profile-dropdown {
+		right: 5em;
+		top: 6em;
 		.form-input {
 			display: flex;
 			flex-direction: column;

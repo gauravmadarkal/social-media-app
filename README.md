@@ -1,2 +1,2 @@
 # Social Media Mock App
-This is a project built with react and linked to cloudflare workers and KV store
+This is a project developed with react and linked to cloudflare workers and KV store
